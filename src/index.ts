@@ -3,7 +3,7 @@ import * as express from "express"
 
 const app = express()
 
-const host = "http://localhost:5000"
+const host = "http://25.11.28.220:5000"
 
 app.post("/store/checkout/payment/mercadopago/callback/:storeId", async (req, res) => {
     
