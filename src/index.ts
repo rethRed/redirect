@@ -7,7 +7,7 @@ app.post("/store/checkout/payment/mercadopago/callback/:storeId", async (req, re
     
     const { storeId } = req.params
 
-    const redirectUrl = `http://localhost:5000//store/checkout/payment/mercadopago/callback/${storeId}`
+    const redirectUrl = `http://localhost:5000/store/checkout/payment/mercadopago/callback/${storeId}`
     
     await fetch(redirectUrl, {
         body: JSON.stringify(req.body),
