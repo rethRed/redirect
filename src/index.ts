@@ -16,9 +16,13 @@ app.post("/store/checkout/payment/mercadopago/callback/:storeId", async (req, re
 
     const redirectUrl = `${host}/store/checkout/payment/mercadopago/callback/${storeId}`
     
-    axios.post(redirectUrl, {
-        ...req.body
-    }, {  }).catch(err => console.log(err))
+    fetch(redirectUrl, {
+        method: "POST",
+        body: JSON.stringify(req.body),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).catch(err => console.log(err))
 
 
     return res.status(200).json()
@@ -29,9 +33,13 @@ app.post("/checkout/payment/mercado-pago/callback", async (req, res) => {
 
     const redirectUrl = `${host}/checkout/payment/mercado-pago/callback`
     
-    axios.post(redirectUrl, {
-        ...req.body
-    }, {  }).catch(err => console.log(err))
+    fetch(redirectUrl, {
+        method: "POST",
+        body: JSON.stringify(req.body),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).catch(err => console.log(err))
 
 
     return res.status(200).json()
