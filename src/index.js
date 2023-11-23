@@ -18,7 +18,7 @@ app.post("/store/checkout/payment/mercadopago/callback/:storeId", async (req, re
 
 
     return res.status(200).json()
-})
+})//
 
 app.post("/checkout/payment/mercado-pago/callback", async (req, res) => {
     
