@@ -45,5 +45,6 @@ app.post("/checkout/payment/mercado-pago/callback", async (req, res) => {
 })
 
 
-app.listen(80, () => console.log("listening on port 80"))
+const port = 5000
+app.listen(port, () => console.log("listening on port ",port))
 
