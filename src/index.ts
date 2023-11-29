@@ -15,6 +15,8 @@ app.post("/store/checkout/payment/mercadopago/callback/:storeId", async (req, re
 
     const redirectUrl = `${host}/store/checkout/payment/mercadopago/callback/${storeId}`
     
+    console.log(new Date(), req.body,)
+
     fetch(redirectUrl, {
         method: "POST",
         body: JSON.stringify(req.body),
@@ -31,7 +33,7 @@ app.post("/checkout/payment/mercado-pago/callback", async (req, res) => {
     
 
     const redirectUrl = `${host}/checkout/payment/mercado-pago/callback`
-    
+        console.log(req.body)
     fetch(redirectUrl, {
         method: "POST",
         body: JSON.stringify(req.body),
