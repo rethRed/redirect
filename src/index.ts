@@ -7,13 +7,11 @@ const app = express()
 
 app.use(express.json())
 
-const host = "http://25.65.138.118:5000"
+const host = "http://25.38.230.16:5000"
 
-app.post("/store/checkout/payment/mercadopago/callback/:storeId", async (req, res) => {
+app.post("/store/signature/invoices/payments/pix/callback", async (req, res) => {
     
-    const { storeId } = req.params
-
-    const redirectUrl = `${host}/store/checkout/payment/mercadopago/callback/${storeId}`
+    const redirectUrl = `${host}/store/signature/invoices/payments/pix/callback`
     
     console.log(new Date(), req.body,)
 
