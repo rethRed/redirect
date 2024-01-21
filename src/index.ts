@@ -52,7 +52,7 @@ app.post("/store/checkout/payments/pix/callback/:storeId", async (req, res) => {
     
     const { storeId } = req.params
 
-    const redirectUrl = `${host}/store/checkout/paymenst/pix/callback/${storeId}`
+    const redirectUrl = `${host}/store/checkout/payments/pix/callback/${storeId}`
     
     console.log(new Date(), req.body,)
 
