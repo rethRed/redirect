@@ -52,7 +52,7 @@ app.post("/store/checkout/payments/pix/callback/:storeId", async (req, res) => {
     
     const { storeId } = req.params
 
-    const redirectUrl = `${host}/store/checkout/payment/mercadopago/pix/callback/${storeId}`
+    const redirectUrl = `${host}/store/checkout/paymenst/pix/callback/${storeId}`
     
     console.log(new Date(), req.body,)
 
@@ -72,7 +72,7 @@ app.post("/store/checkout/payments/pix/callback/:storeId", async (req, res) => {
 app.post("/checkout/payments/mercado-pago/callback", async (req, res) => {
     
 
-    const redirectUrl = `${host}/checkout/payment/mercado-pago/callback`
+    const redirectUrl = `${host}/checkout/payments/mercado-pago/callback`
         console.log(req.body)
     fetch(redirectUrl, {
         method: "POST",
