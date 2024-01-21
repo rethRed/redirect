@@ -28,6 +28,26 @@ app.post("/store/signature/invoices/payments/pix/callback", async (req, res) => 
 })
 
 
+app.post("/store/signature/invoices/payments/mercado-pago/callback", async (req, res) => {
+    
+    const redirectUrl = `${host}/store/signature/invoices/payments/mercado-pago/callback`
+    
+    console.log(new Date(), req.body,)
+
+    fetch(redirectUrl, {
+        method: "POST",
+        body: JSON.stringify(req.body),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).catch(err => console.log(err))
+
+
+    return res.status(200).json()
+})
+
+
+
 app.post("/store/checkout/payment/mercadopago/pix/callback/:storeId", async (req, res) => {
     
     const { storeId } = req.params
