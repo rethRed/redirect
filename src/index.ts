@@ -48,7 +48,7 @@ app.post("/store/signature/invoices/payments/mercado-pago/callback", async (req,
 
 
 
-app.post("/store/checkout/payment/mercadopago/pix/callback/:storeId", async (req, res) => {
+app.post("/store/checkout/payments/pix/callback/:storeId", async (req, res) => {
     
     const { storeId } = req.params
 
@@ -69,7 +69,7 @@ app.post("/store/checkout/payment/mercadopago/pix/callback/:storeId", async (req
 })
 
 
-app.post("/checkout/payment/mercado-pago/callback", async (req, res) => {
+app.post("/checkout/payments/mercado-pago/callback", async (req, res) => {
     
 
     const redirectUrl = `${host}/checkout/payment/mercado-pago/callback`
