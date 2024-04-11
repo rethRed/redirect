@@ -26,7 +26,7 @@ app.post("/store/signature/invoices/payments/pix/callback", async (req, res) => 
 
     return res.status(200).json()
 })
-
+// dfd
 
 app.post("/store/signature/invoices/payments/mercado-pago/callback", async (req, res) => {
     
